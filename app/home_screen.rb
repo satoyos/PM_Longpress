@@ -14,10 +14,6 @@ class HomeScreen < PM::TableScreen
   private
 
   def test_cells
-    (1..20).to_a.map{|num|
-      {
-          title: "aaa#{num}"
-      }
-    }
+    (1..20).to_a.inject([]){|result, num| result + [{title: "aaa#{num}"}, {title: "bbb#{num}"}]}
   end
 end
