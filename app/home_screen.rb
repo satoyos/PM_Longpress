@@ -13,9 +13,23 @@ class HomeScreen < PM::TableScreen
      }]
   end
 
+  def cell_tapped(args)
+    puts "#{args[:name]} tapped!"
+  end
+
   private
 
   def test_cells
-    (1..20).to_a.inject([]){|result, num| result + [{title: "aaa#{num}"}, {title: "bbb#{num}"}]}
+    (1..20).to_a.inject([]){|result, num|
+      result + [cell_hash("aaa#{num}"), cell_hash("bbb#{num}")]}
   end
+
+  def cell_hash(cell_title)
+    {
+        title: cell_title,
+        action: :cell_tapped,
+        arguments: {name: cell_title}
+    }
+  end
+
 end
