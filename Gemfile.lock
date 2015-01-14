@@ -1,8 +1,12 @@
-GEM
-  remote: https://rubygems.org/
+PATH
+  remote: /Users/yoshi/src/misc/ProMotion
   specs:
     ProMotion (2.2.0)
       methadone (~> 1.7)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     methadone (1.8.0)
       bundler
     rake (10.4.2)
@@ -11,5 +15,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ProMotion
+  ProMotion!
   rake
