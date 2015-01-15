@@ -20,6 +20,12 @@ class HomeScreen < PM::TableScreen
 
   def cell_long_pressed(args)
     puts "#{args[:name]} Long Pressed!!!"
+    UIAlertView.alloc.initWithTitle(nil,
+                           message: "[#{args[:name]}] Long Pressed!",
+                          delegate: self,
+                 cancelButtonTitle: 'OK',
+                 otherButtonTitles: nil
+    ).show
   end
 
   private
