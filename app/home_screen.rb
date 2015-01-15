@@ -25,7 +25,7 @@ class HomeScreen < PM::TableScreen
   private
 
   def test_cells
-    (1..3).to_a.inject([]){|result, num|
+    (1..30).to_a.inject([]){|result, num|
       result + [cell_hash("aaa#{num}"), cell_hash("bbb#{num}")]}
   end
 
